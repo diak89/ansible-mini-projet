@@ -1,0 +1,3 @@
+---
+system_user: admin
+home_dir: /home/{{ system_user }}

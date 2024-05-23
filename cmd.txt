@@ -1,0 +1,21 @@
+#Install ansible lint
+
+sudo yum install python-pip
+sudo pip install ansible-lint
+# extract roles from requirements.yml
+ansible-galaxy install -r roles/requirements.yml
+ansible-lint wordpress.yml
+
+ansible-playbook -i hosts.yml --ask-vault-pass wordpress.yml
+
+#Ansible verbose option
+ansible-playbook -i hosts.yml -vvv wordpress.yml
+
+#Push code 
+git init
+git add .
+git config –global user.email “diak89@gmail.com”
+git config –global user.name “diak89”
+git commit -m “webapp first version”
+git add origin
+git push origin master
