@@ -9,6 +9,9 @@ ansible-lint wordpress.yml
 #creer squelete role 
 ansible-galaxy init test-role
 
+#Tester avec le dossier tests
+ansible-playbook -i roles/ansible-role-deploy/tests/inventory roles/ansible-role-deploy/tests/test.yml --ask-vault-pass --syntax-check
+
 ansible-playbook -i hosts.yml --ask-vault-pass wordpress.yml
 
 #Ansible verbose option
@@ -17,8 +20,9 @@ ansible-playbook -i hosts.yml -vvv wordpress.yml
 #Push code 
 git init
 git add .
-git config –global user.email “diak89@gmail.com”
-git config –global user.name “diak89”
-git commit -m “webapp first version”
+git status 
+git config --global user.email "diak89@gmail.com"
+git config --global user.name "diak89"
+git commit -m "webapp with tests folder"
 git add origin
-git push origin master
+git push origin master (ou main)
