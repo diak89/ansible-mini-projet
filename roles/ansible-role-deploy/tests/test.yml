@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: true
+  vars:
+    system_user: admin
+  vars_files:
+    - ../files/secrets/credentials.yml
+  roles:
+    - '.'
