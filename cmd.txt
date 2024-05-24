@@ -6,6 +6,9 @@ sudo pip install ansible-lint
 ansible-galaxy install -r roles/requirements.yml
 ansible-lint wordpress.yml
 
+#creer squelete role 
+ansible-galaxy init test-role
+
 ansible-playbook -i hosts.yml --ask-vault-pass wordpress.yml
 
 #Ansible verbose option
